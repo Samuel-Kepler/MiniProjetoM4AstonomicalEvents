@@ -1,5 +1,5 @@
-import { events } from "../database/eventDatabase";
+import { events } from "../database/eventDatabase.js";
 
 export const getAllEvents = (req, res) => {
-    res.status(200).json(events);
+    res.status(200).send(events);
 };
