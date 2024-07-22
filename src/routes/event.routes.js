@@ -1,13 +1,12 @@
-import express from 'express';
+import { Router } from 'express';
+import { getAllEvents } from '../controllers/getAllEvents.controller.js';
+import { getEventById } from '../controllers/getEventById.controller.js';
+import { getUpcomingEvents } from '../controllers/getUpcomingEvents.controller.js'
 
-import { getAllEvents } from '../controllers/getAllEvents';
-import { getEventById } from '../controllers/getEventById';
-import { getUpcomingEvents } from '../controllers/getUpcomingEvents';
+const eventRouter = Router();
 
-const router = express.Router();
+eventRouter.get('/event/all', getAllEvents);
+eventRouter.get('/event/:id', getEventById);
+eventRouter.get('/next', getUpcomingEvents);
 
-router.get('/todos-eventos', getAllEvents);
-router.get('/evento/:id', getEventById);
-router.get('/proximos-eventos', getUpcomingEvents);
-
-export default router;
+export { eventRouter };
