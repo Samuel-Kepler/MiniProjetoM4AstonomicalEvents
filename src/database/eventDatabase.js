@@ -1,4 +1,4 @@
-import { Event } from "../models/envent.model.js";
+import { Event } from "../models/event.model.js";
 
 export const events = [
     new Event("Eclipse Lunar Total", "2024-04-08", "América do Norte, América Central, América do Sul"),
@@ -12,7 +12,7 @@ export const events = [
     new Event("Chuva de Meteoros Geminidas", "2024-12-14", "Global"),
     new Event("Chuva de Meteoros Úrsidas", "2024-12-22", "Global"),
 
-      // Eventos de 2025
+    // Eventos de 2025
     new Event("Chuva de Meteoros Quadrantidas", "2025-01-04", "Global"),
     new Event("Eclipse Solar Parcial", "2025-03-29", "Ásia, Europa, África"),
     new Event("Eclipse Lunar Total", "2025-03-14", "América do Norte, América do Sul, Europa, África"),
